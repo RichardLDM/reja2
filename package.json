@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "new": "node new.js",
     "dev": "nodemon server.js",
     "train": "node train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,3 +19,4 @@
     "settings": "^0.1.1"
   }
 }
+

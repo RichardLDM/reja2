@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1_1">
+                        <img src="images/profile.png" width="156px" height="142px" alt="">
+                    </div>
+                    <div class="left_1_2">
+                        <%=user.name%>
+                    </div>
+                    <div class="left_1_3">
+                        <%=user.profession%>
+                    </div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector-1.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector-2.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector-3.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector-4.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector-5.svg" class="icon-1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="left_2_1">
+                        <div class="info-1">Age:</div>
+                        <div class="">
+                            <%=user.age%>
+                        </div>
+                    </div>
+                    <div class="left_2_1">
+                        <div class="info-2">Residence:</div>
+                        <div class="">
+                            <%=user.residence%>
+                        </div>
+                    </div>
+                    <div class="left_2_1">
+                        <div class="info-3">Freelance:</div>
+
+                        <div class="info-3 <%= user.freelance ? 'available' : 'unavailable' %>">
+                            <%= user.freelance ? 'Available' : 'Not Available' %>
+                        </div>
+                    </div>
+
+                    <div class="left_2_1">
+                        <div class="info-4">Adress:</div>
+                        <div class="">
+                            <%=user.adress%>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <div class="left_3">
+                        <div class="left_3_title">Languages</div>
+                        <div class="marginer-1"></div>
+                        <% user.knowledge.forEach(lang=> { %>
+                            <div class="language_item">
+                                <div class="lang_header">
+                                    <span class="lang_name">
+                                        <%= lang.name %>
+                                    </span>
+                                    <span class="lang_level">
+                                        <%= lang.level %>%
+                                    </span>
+                                </div>
+                                <div class="lang_bar">
+                                    <div class="lang_fill" style="width:<%= lang.level %>%"></div>
+                                </div>
+
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <div class="left_4">
+                        <div class="left_4_title">Skill</div>
+                        <% user.skills.forEach(skill=> { %>
+                            <div class="skill_item">
+                                <div class="skill_header">
+                                    <span class="skill_name">
+                                        <%= skill.name %>
+                                    </span>
+                                    <span class="skill_level">
+                                        <%= skill.level %>%
+                                    </span>
+                                </div>
+                                <div class="skill_bar">
+                                    <div class="skill_fill" style="width:<%= skill.level %>%"></div>
+                                </div>
+
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <div class="left_extra">
+                        <div class="left_extra_title">Extra Skills</div>
+                        <% user.extra_skills.forEach(skill=> { %>
+                            <div class="extra_item">
+                                <span class="extra_icon"></span>
+                                <span class="extra_text">
+                                    <%= skill %>
+                                </span>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </div>
+            <div class="midd_frame">
+                <div class="midd-1">
+                    <div class="inheritance">
+                        <div class="inheritance2">
+                            <img src="btn_icon/coding.png" alt="development">
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Blog, E-Commerce</p>
+                    </div>
+                </div>
+                <div class="midd-2">
+                    <div class="inheritance">
+                        <div class="inheritance2">
+                            <img src="btn_icon/illustration.png" class="design">
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Mobile App, Website Design</p>
+                    </div>
+                </div>
+                <div class="midd-3">
+                    <div class="inheritance">
+                        <div class="inheritance2">
+                            <img src="btn_icon/Microphone.png" class="sound">
+                        </div>
+                        <h3>Sound Design</h3>
+                        <p>Voice Over, Beat Making</p>
+                    </div>
+                </div>
+                <div class="midd-4">
+                    <div class="inheritance">
+                        <div class="inheritance2">
+                            <img src="btn_icon/game-development.png" class="game">
+                        </div>
+                        <h3>Game Design</h3>
+                        <p>Charachter Design, Props & Objects</p>
+                    </div>
+                </div>
+                <div class="midd-5">
+                    <div class="inheritance">
+                        <div class="inheritance2">
+                            <img src="btn_icon/Photographer.png" class="Photo">
+                        </div>
+                        <h3>Photography</h3>
+                        <p>Portrait, Product Photography</p>
+                    </div>
+                </div>
+                <div class="midd-6">
+                    <div class="final">
+                        <h3>Final</h3>
+                        <p>That was challenging but helped us to practice and learn more and faster! Practice makes
+                            persect! so do not stop learning!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right_frame">
+                <div class="column">
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Vector11.png" class="icon-11">
+                        </a>
+                    </div>
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Home.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Contact.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/cv.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Portfolio.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Blog.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Services.png" class="icon-11">
+                        </a>
+                    </div>
+
+                    <div class="line">
+                        <a class="link_href" href="#">
+                            <img src="box_images/Contact.png" class="icon-11">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
