@@ -1,4 +1,24 @@
+// B-task
+function countDigits(sort) {
+    let count = 0;
+    for (let i = 0; i < sort.length; i++) {
+        if (/\d/.test(sort[i])) {
+            count++;
+        }
+    }
+    return count;
+}
 
+// console.log(countDigits("djtfy6sdsuya5gdwgui86868iuh"));
+
+// const raqam = "hsdiuy87s76sd7t86tsdt876";
+// const count2 = countDigits(raqam)
+// console.log("Raqamlar soni:", count2);
+
+const count = countDigits("hsdiuy87s76sd7t86tsdt876")
+console.log("Raqamlar soni2:", count);
+
+/*
 // C-TASK
 
 function harfSanash(c, letter) {
@@ -41,7 +61,7 @@ function countLetter(a, word) {
     return count;
 }
 
-console.log(countLetter("e", "engineer"));
+console.log(countLetter("e", "engineer")); */
 /*
 // Event loop and Callback
 console.log("Jack Ma maslahatlari!")
