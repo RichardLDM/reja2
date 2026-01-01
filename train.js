@@ -1,22 +1,118 @@
-// B-task
-function countDigits(sort) {
-    let count = 0;
-    for (let i = 0; i < sort.length; i++) {
-        if (/\d/.test(sort[i])) {
-            count++;
-        }
+// C-TASK update
+class SHOP2 {
+    
+
+        
+    constructor(product, price, remaining) {
+        this.product = product;
+        this.price = price; 
+        this.remaining = remaining;
+        
+
+        
     }
-    return count;
-}
 
-// console.log(countDigits("djtfy6sdsuya5gdwgui86868iuh"));
+    vaqt() {
+        const time = new Date();
+        let hours = time.getHours();
+        let minutes = time.getMinutes();
+        return `${hours}:${minutes}`;
+    }
+    products() {
+            console.log(`The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.vaqt()}!`);
+        }
 
-// const raqam = "hsdiuy87s76sd7t86tsdt876";
-// const count2 = countDigits(raqam)
-// console.log("Raqamlar soni:", count2);
+    qabul(qoshish) {
+        this.remaining = this.remaining + qoshish;
+    }
 
-const count = countDigits("hsdiuy87s76sd7t86tsdt876")
-console.log("Raqamlar soni2:", count);
+    sotish(ayrish) {
+        this.remaining = this.remaining - ayrish;
+    }
+
+};
+
+const newshop = new SHOP2("non", 2, 3);
+const newshop2 = new SHOP2("cola", 5, 7);
+const newshop3= new SHOP2("lagmon", 7, 3);
+
+newshop2.sotish(3);
+newshop2.qabul(5);
+newshop2.products();
+
+newshop.sotish(1);
+newshop.qabul(10);
+newshop.products();
+
+newshop3.sotish(5);
+newshop3.qabul(2);
+newshop3.products();
+
+
+// C-TASK 
+class SHOP {
+    
+
+        
+    constructor(product, price, remaining, data) {
+        this.product = product;
+        this.price = price; 
+        this.remaining = remaining;
+        this.data = data;
+
+        
+    }
+
+
+    products() {
+            console.log(`The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.data}!`);
+        }
+
+    qabul(qoshish) {
+        this.remaining = this.remaining + qoshish;
+    }
+
+    sotish(ayrish) {
+        this.remaining = this.remaining - ayrish;
+    }
+
+};
+
+const shop = new SHOP("non", 2, 3, "08:40");
+const shop2 = new SHOP("cola", 5, 7, "08:40");
+const shop3= new SHOP("lagmon", 7, 3, "08:40");
+
+shop2.sotish(3);
+shop2.qabul(5);
+shop2.products();
+
+shop.sotish(1);
+shop.qabul(10);
+shop.products();
+
+shop3.sotish(5);
+shop3.qabul(2);
+shop3.products();
+
+// // B-task
+// function countDigits(sort) {
+//     let count = 0;
+//     for (let i = 0; i < sort.length; i++) {
+//         if (/\d/.test(sort[i])) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// // console.log(countDigits("djtfy6sdsuya5gdwgui86868iuh"));
+
+// // const raqam = "hsdiuy87s76sd7t86tsdt876";
+// // const count2 = countDigits(raqam)
+// // console.log("Raqamlar soni:", count2);
+
+// const count = countDigits("hsdiuy87s76sd7t86tsdt876")
+// console.log("Raqamlar soni2:", count);
 
 /*
 // C-TASK
