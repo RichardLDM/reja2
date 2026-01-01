@@ -1,5 +1,5 @@
 // C-TASK update
-class SHOP2 {
+class NewSHop {
     
 
         
@@ -19,7 +19,7 @@ class SHOP2 {
         return `${hours}:${minutes}`;
     }
     products() {
-            console.log(`The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.vaqt()}!`);
+            console.log(`NewShop: The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.vaqt()}!`);
         }
 
     qabul(qoshish) {
@@ -32,9 +32,9 @@ class SHOP2 {
 
 };
 
-const newshop = new SHOP2("non", 2, 3);
-const newshop2 = new SHOP2("cola", 5, 7);
-const newshop3= new SHOP2("lagmon", 7, 3);
+const newshop = new NewSHop("non", 2, 3);
+const newshop2 = new NewSHop("cola", 5, 7);
+const newshop3= new NewSHop("lagmon", 7, 3);
 
 newshop2.sotish(3);
 newshop2.qabul(5);
@@ -65,7 +65,7 @@ class SHOP {
 
 
     products() {
-            console.log(`The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.data}!`);
+            console.log(`SHOP: The price of the ${this.product} is ${this.price}$ and there is ${this.remaining} left at ${this.data}pm!`);
         }
 
     qabul(qoshish) {
