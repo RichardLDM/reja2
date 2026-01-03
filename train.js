@@ -1,3 +1,34 @@
+// D-TASK
+
+function checkContent(a, b) {
+    if (a.length !== b.length) {
+        console.log(false);
+        return;
+    }
+
+    for (let word of a) {
+        if (!b.includes(word)) {
+            console.log(false);
+            return;
+        }
+    } 
+    console.log(true);
+}
+
+checkContent("study", "yutds");
+
+// function check(a, b) {
+//     //  a = "absshghs";
+//     //  b = "ahsjahsjka";
+//     // result = a === b;
+//     a = "study";
+//     b = "yutds"
+//     result = a !== b;
+//     console.log(result)
+// }
+
+// check();
+/*
 // C-TASK update
 class NewSHop {
     
@@ -93,6 +124,8 @@ shop.products();
 shop3.sotish(5);
 shop3.qabul(2);
 shop3.products();
+
+*/
 
 // // B-task
 // function countDigits(sort) {
