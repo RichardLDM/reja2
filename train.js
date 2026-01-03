@@ -1,21 +1,17 @@
 // D-TASK
 
 function checkContent(a, b) {
-    if (a.length !== b.length) {
-        console.log(false);
-        return;
-    }
-
+    if (a.length !== b.length) return false;
+    
     for (let word of a) {
         if (!b.includes(word)) {
-            console.log(false);
-            return;
+            return false;
         }
     } 
-    console.log(true);
+    return true;
 }
 
-checkContent("study", "yutds");
+console.log(checkContent("study", "yutds"));
 
 // function check(a, b) {
 //     //  a = "absshghs";
