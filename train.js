@@ -1,17 +1,29 @@
-// D-TASK
 
-function checkContent(a, b) {
-    if (a.length !== b.length) return false;
-    
-    for (let word of a) {
-        if (!b.includes(word)) {
-            return false;
-        }
-    } 
-    return true;
+// C-TASK
+function getReverse(hi) {
+    if (hi === "") {
+        return hi;
+    } else {
+        return getReverse(hi.substr(1)) + hi[0];
+    }
 }
 
-console.log(checkContent("study", "yutds"));
+console.log(getReverse("Hello"));
+
+// // D-TASK
+
+// function checkContent(a, b) {
+//     if (a.length !== b.length) return false;
+    
+//     for (let word of a) {
+//         if (!b.includes(word)) {
+//             return false;
+//         }
+//     } 
+//     return true;
+// }
+
+// console.log(checkContent("study", "yutds"));
 
 // function check(a, b) {
 //     //  a = "absshghs";
