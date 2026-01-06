@@ -1,5 +1,5 @@
 
-// C-TASK
+// E-TASK
 function getReverse(hi) {
     if (hi === "") {
         return hi;
