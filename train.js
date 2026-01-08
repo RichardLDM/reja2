@@ -1,14 +1,28 @@
-
-// E-TASK
-function getReverse(hi) {
-    if (hi === "") {
-        return hi;
-    } else {
-        return getReverse(hi.substr(1)) + hi[0];
+// F-TASK
+function findDoubles(a) {
+    for (let i = 0; i < a.length; i++) {
+        if (a.indexOf(a[i]) !== a.lastIndexOf(a[i])) { 
+            return true; 
+        }
+       
     }
+    
+    return false;
+    
 }
 
-console.log(getReverse("Hello"));
+console.log("Result 1:", findDoubles("Hello"));
+console.log("Result 2:", findDoubles("hi"));
+// // E-TASK
+// function getReverse(hi) {
+//     if (hi === "") {
+//         return hi;
+//     } else {
+//         return getReverse(hi.substr(1)) + hi[0];
+//     }
+// }
+
+// console.log(getReverse("Hello"));
 
 // // D-TASK
 
